@@ -1,7 +1,7 @@
 package com.sem.customsounds;
 
 public enum Sound {
-  COLLECTION_LOG_SLOT("ColLogSlotCompleted_r1.wav");
+  COLLECTION_LOG_SLOT("ZeldaChestOpening.wav");
 
    private final String resourceName;
 
