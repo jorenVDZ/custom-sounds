@@ -13,7 +13,8 @@ public interface CustomSoundsConfig extends Config
 		description = "Adjust how loud the audio is played!",
 		position = 0
 	)
-	default int soundVolume() {
+	default int soundVolume()
+	{
 		return 100;
 	}
 
@@ -23,7 +24,8 @@ public interface CustomSoundsConfig extends Config
 		description = "Should a sound play when you fill in a new slot in your collection log? This one relies on you having chat messages (included with the popup option) enabled in game settings!",
 		position = 1
 	)
-	default boolean announceCollectionLog() {
+	default boolean announceCollectionLog()
+	{
 		return true;
 	}
 }

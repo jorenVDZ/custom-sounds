@@ -24,11 +24,8 @@ import net.runelite.client.plugins.PluginDescriptor;
 import okhttp3.OkHttpClient;
 
 @Slf4j
-@PluginDescriptor(
-	name = "Custom Sounds",
-	description = "Adds the ability to add various sounds to different events in the game.",
-	tags = { "sounds" }
-)
+@PluginDescriptor(name = "Custom Sounds", description = "Adds the ability to add various sounds to different events in the game.", tags = {
+	"sounds"})
 public class CustomSoundsPlugin extends Plugin
 {
 	@Inject
@@ -50,7 +47,8 @@ public class CustomSoundsPlugin extends Plugin
 	@Inject
 	private SoundEngine soundEngine;
 
-	private static final Pattern COLLECTION_LOG_ITEM_REGEX = Pattern.compile("New item added to your collection log:.*");
+	private static final Pattern COLLECTION_LOG_ITEM_REGEX = Pattern
+		.compile("New item added to your collection log:.*");
 
 	@Override
 	protected void startUp() throws Exception
@@ -76,15 +74,18 @@ public class CustomSoundsPlugin extends Plugin
 	}
 
 	@Subscribe
-	public void onChatMessage(ChatMessage chatMessage) {
-		if (chatMessage.getType() != ChatMessageType.GAMEMESSAGE && chatMessage.getType() != ChatMessageType.SPAM) {
+	public void onChatMessage(ChatMessage chatMessage)
+	{
+		if (chatMessage.getType() != ChatMessageType.GAMEMESSAGE && chatMessage.getType() != ChatMessageType.SPAM)
+		{
 			return;
 		}
 
-		if (config.announceCollectionLog() && COLLECTION_LOG_ITEM_REGEX.matcher(chatMessage.getMessage()).matches()) {
+		if (config.announceCollectionLog() && COLLECTION_LOG_ITEM_REGEX.matcher(chatMessage.getMessage()).matches())
+		{
 			soundEngine.playClip(Sound.COLLECTION_LOG_SLOT);
 
-		} 
+		}
 	}
 
 	@Provides
