@@ -1,10 +1,10 @@
-package com.example;
+package com.sem.customsounds;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
+@ConfigGroup("customsounds")
 public interface CustomSoundsConfig extends Config
 {
 	@ConfigItem(

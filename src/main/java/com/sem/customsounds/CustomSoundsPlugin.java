@@ -1,4 +1,4 @@
-package com.example;
+package com.sem.customsounds;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -15,8 +15,8 @@ import net.runelite.client.plugins.PluginDescriptor;
 @Slf4j
 @PluginDescriptor(
 	name = "Custom Sounds",
-	description = "Adds the ability to add various sounds to different events in the game",
-	tags = { "sound" }
+	description = "Adds the ability to add various sounds to different events in the game.",
+	tags = { "sounds" }
 )
 public class CustomSoundsPlugin extends Plugin
 {
