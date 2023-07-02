@@ -8,19 +8,10 @@ import net.runelite.client.config.ConfigItem;
 public interface CustomSoundsConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
-	)
-	default String greeting()
-	{
-		return "Hello";
-	}
-
-	@ConfigItem(
 		keyName = "soundVolume",
 		name = "Sound volume",
-		description = "Adjust how loud the audio is played!"
+		description = "Adjust how loud the audio is played!",
+		position = 0
 	)
 	default int soundVolume() {
 		return 100;
@@ -29,7 +20,8 @@ public interface CustomSoundsConfig extends Config
 	@ConfigItem(
 		keyName = "announceCollectionLog",
 		name = "New collection log entry",
-		description = "Should a sound play when you fill in a new slot in your collection log? This one relies on you having chat messages (included with the popup option) enabled in game settings!"
+		description = "Should a sound play when you fill in a new slot in your collection log? This one relies on you having chat messages (included with the popup option) enabled in game settings!",
+		position = 1
 	)
 	default boolean announceCollectionLog() {
 		return true;
