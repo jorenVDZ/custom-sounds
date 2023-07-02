@@ -14,15 +14,17 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Custom Sounds",
+	description = "Adds the ability to add various sounds to different events in the game",
+	tags = { "sound" }
 )
-public class ExamplePlugin extends Plugin
+public class CustomSoundsPlugin extends Plugin
 {
 	@Inject
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private CustomSoundsConfig config;
 
 	@Override
 	protected void startUp() throws Exception
@@ -46,8 +48,8 @@ public class ExamplePlugin extends Plugin
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+	CustomSoundsConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(CustomSoundsConfig.class);
 	}
 }
